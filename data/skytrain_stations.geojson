@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "skytrain_stations",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "station": "VCC - Clark", "geo_local_area": "Strathcona", "longitude": -123.079, "latitude": 49.266, "id_count": 1, "rank": 14 }, "geometry": { "type": "Point", "coordinates": [ -123.078962252431211, 49.265783198499115 ] } },
+{ "type": "Feature", "properties": { "station": "Olympic Village", "geo_local_area": "Fairview", "longitude": -123.115, "latitude": 49.266, "id_count": 9, "rank": 7 }, "geometry": { "type": "Point", "coordinates": [ -123.115196678993939, 49.26634023249435 ] } },
+{ "type": "Feature", "properties": { "station": "Broadway - City Hall", "geo_local_area": "Mount Pleasant", "longitude": -123.115, "latitude": 49.263, "id_count": 10, "rank": 6 }, "geometry": { "type": "Point", "coordinates": [ -123.114782181391362, 49.262773467883477 ] } },
+{ "type": "Feature", "properties": { "station": "King Edward", "geo_local_area": "Riley Park", "longitude": -123.115, "latitude": 49.249, "id_count": 1, "rank": 14 }, "geometry": { "type": "Point", "coordinates": [ -123.115336104847145, 49.24912287838039 ] } },
+{ "type": "Feature", "properties": { "station": "Burrard", "geo_local_area": "Downtown", "longitude": -123.12, "latitude": 49.286, "id_count": 37, "rank": 4 }, "geometry": { "type": "Point", "coordinates": [ -123.119972336442018, 49.285860149173665 ] } },
+{ "type": "Feature", "properties": { "station": "Marine Drive", "geo_local_area": "Marpole", "longitude": -123.117, "latitude": 49.21, "id_count": 2, "rank": 12 }, "geometry": { "type": "Point", "coordinates": [ -123.117070776267383, 49.209547873924087 ] } },
+{ "type": "Feature", "properties": { "station": "Granville", "geo_local_area": "Downtown", "longitude": -123.116, "latitude": 49.284, "id_count": 47, "rank": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.116404027195117, 49.283637686800603 ] } },
+{ "type": "Feature", "properties": { "station": "Stadium - Chinatown", "geo_local_area": "Downtown", "longitude": -123.11, "latitude": 49.279, "id_count": 23, "rank": 5 }, "geometry": { "type": "Point", "coordinates": [ -123.109564796303161, 49.279441691877643 ] } },
+{ "type": "Feature", "properties": { "station": "Main Street - Science World", "geo_local_area": "Downtown", "longitude": -123.101, "latitude": 49.273, "id_count": 4, "rank": 9 }, "geometry": { "type": "Point", "coordinates": [ -123.100606907688558, 49.273177911879657 ] } },
+{ "type": "Feature", "properties": { "station": "29th Avenue", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.046, "latitude": 49.244, "id_count": 0, "rank": 18 }, "geometry": { "type": "Point", "coordinates": [ -123.045940673986337, 49.244242592177315 ] } },
+{ "type": "Feature", "properties": { "station": "Joyce - Collingwood", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.032, "latitude": 49.238, "id_count": 1, "rank": 14 }, "geometry": { "type": "Point", "coordinates": [ -123.031806717107784, 49.238393805234857 ] } },
+{ "type": "Feature", "properties": { "station": "Rupert", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.033, "latitude": 49.261, "id_count": 2, "rank": 12 }, "geometry": { "type": "Point", "coordinates": [ -123.032823831814156, 49.260764777915142 ] } },
+{ "type": "Feature", "properties": { "station": "Renfrew", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.045, "latitude": 49.259, "id_count": 3, "rank": 10 }, "geometry": { "type": "Point", "coordinates": [ -123.045308458747684, 49.258892910829509 ] } },
+{ "type": "Feature", "properties": { "station": "Commercial - Broadway", "geo_local_area": "Grandview-Woodland", "longitude": -123.068, "latitude": 49.263, "id_count": 3, "rank": 10 }, "geometry": { "type": "Point", "coordinates": [ -123.068453898837291, 49.262936267368431 ] } },
+{ "type": "Feature", "properties": { "station": "Waterfront", "geo_local_area": "Downtown", "longitude": -123.113, "latitude": 49.286, "id_count": 40, "rank": 2 }, "geometry": { "type": "Point", "coordinates": [ -123.113339268900802, 49.285665767392395 ] } },
+{ "type": "Feature", "properties": { "station": "Vancouver City Center", "geo_local_area": "Downtown", "longitude": -123.119, "latitude": 49.282, "id_count": 38, "rank": 3 }, "geometry": { "type": "Point", "coordinates": [ -123.119284089214446, 49.281734707452856 ] } },
+{ "type": "Feature", "properties": { "station": "Yaletown - Roundhouse", "geo_local_area": "Downtown", "longitude": -123.122, "latitude": 49.274, "id_count": 8, "rank": 8 }, "geometry": { "type": "Point", "coordinates": [ -123.121890377796404, 49.274362254837513 ] } },
+{ "type": "Feature", "properties": { "station": "Oakridge - 41st Avenue", "geo_local_area": "Oakridge", "longitude": -123.116, "latitude": 49.233, "id_count": 1, "rank": 14 }, "geometry": { "type": "Point", "coordinates": [ -123.116040675328207, 49.233466810769322 ] } },
+{ "type": "Feature", "properties": { "station": "Langara - 49th Avenue", "geo_local_area": "Oakridge", "longitude": -123.116, "latitude": 49.226, "id_count": 0, "rank": 19 }, "geometry": { "type": "Point", "coordinates": [ -123.116324860846433, 49.22638691960163 ] } },
+{ "type": "Feature", "properties": { "station": "Nanaimo", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.056, "latitude": 49.248, "id_count": 0, "rank": 20 }, "geometry": { "type": "Point", "coordinates": [ -123.055871516332786, 49.24827221061684 ] } }
+]
+}
