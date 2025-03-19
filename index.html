@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toronto's Top 5 Most Park Accessible Subway Stations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/map.css" />
+
+</head>
+<body>
+    <!-- <div id="loading-overlay">
+        <div id="loading-message">Loading...</div>
+    </div> -->
+
+    <div class="main-content">
+        <h1>Top 5 Vancouver Coffee Shop SkyTrain Stops</h1>
+        <section class="introduction">
+            <p>Zoom in to view and click on any station or use the dropdown menu below. "Hectares" represents the number of hectares of parkland within a  5-minute walk.</p>
+        </section>
+        <div class="dropdown-container">
+            <label for="station-dropdown">Select a Station:</label>
+            <select id="station-dropdown"><option value="" disabled selected>Select a station</option></select>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024: Chris Hoornaert -
+            <a href="https://www.chrishoornaert.com">www.chrishoornaert.com</a> -
+            <a href="mailto:dev@chrishoornaert.com">dev@chrishoornaert.com</a>
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-providers@1.10.2/dist/leaflet-providers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
