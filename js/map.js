@@ -1,5 +1,6 @@
 // Initialize the map
 var map = L.map('map').setView([49.251546,-123.127252], 12);
+const stationMarkers = {};
 
 // Add tile layer
 L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png?api_key=22685591-9232-45c7-a495-cfdf0e81ab86', {
@@ -71,11 +72,49 @@ function getSkyTrainLine(line) {
     };
 }
 
+function populateStationDropdown (stationsData) {
+    const dropdown = document.getElementById('station-dropdown');
+
+    stationsData.features.sort((a,b) =>
+        a.properties.station.localeCompare(b.properties.station)
+    );
+
+    stationsData.features.forEach((station,index) => {
+        const option=document.createElement('option');
+        option.value=index;
+        option.text=station.properties.station;
+        dropdown.add(option);
+    });
+
+    dropdown.addEventListener ('change', function() {
+        const selectedIndex=dropdown.value;
+        if(selectedIndex!=="") {
+            const selectedStation= stationsData.features[selectedIndex];
+            zoomToStation(selectedStation)
+        }
+    });
+}
+
+function zoomToStation(station) {
+    const stationName = station.properties.station;
+
+    let marker = stationMarkers[stationName];
+
+    if(marker) {
+        map.setView(marker.getLatLng(), 15);
+
+        setTimeout(() => marker.openPopup(), 600);
+    }else {
+        console.error("Station marker not found: ", stationName);
+    }
+}
+
 
 //Fetch and process the SkyTrain station GeoJSON
 fetch('data/skytrain_stations.geojson')
     .then(response => response.json())
     .then(data => {
+        populateStationDropdown(data);
         L.geoJSON(data, {
             pointToLayer: function (feature, latlng) {
                 let rank = feature.properties.rank;
@@ -85,17 +124,28 @@ fetch('data/skytrain_stations.geojson')
                     <img src="images/maple-leaf.svg" alt="Maple Leaf"
                          style="display: block; margin: 0 auto; width: 2rem; height: 2rem;">
                     <b>Station: ${feature.properties['station']}</b><br>
-                    <b>Coffee Shops (5-min walk): ${feature.properties['id_count']}</b><br>
+                    <b>Neighbourhood: ${feature.properties['geo_local_area']}</b><br>
+                    <b>Coffee Shops: ${feature.properties['id_count']}</b><br>
                     <b>Rank (out of 20): ${feature.properties['rank']}</b><br>
                 `;
 
                 marker.bindPopup(popupContent, { offset: [0, 0] });
+
+                // Bind Tooltip
+                marker.bindTooltip(`${feature.properties.station} (Coffee Shops: ${feature.properties.id_count})`, {
+                    permanent: false,
+                    direction: "top",
+                    className: "station-tooltip"
+                });
+
+                stationMarkers[feature.properties.station] = marker;
 
                 return marker;
             }
         }).addTo(map);
     })
     .catch(error => console.error('Error loading GeoJSON:', error));
+
 
 
 fetch('data/skytrain_lines.geojson')
