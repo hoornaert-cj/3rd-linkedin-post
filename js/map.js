@@ -78,12 +78,25 @@ fetch('data/skytrain_stations.geojson')
     .then(data => {
         L.geoJSON(data, {
             pointToLayer: function (feature, latlng) {
-                let rank=feature.properties.rank;
-                return L.marker(latlng, { icon: getIcon(rank) });
+                let rank = feature.properties.rank;
+                let marker = L.marker(latlng, { icon: getIcon(rank) });
+
+                let popupContent = `
+                    <img src="images/maple-leaf.svg" alt="Maple Leaf"
+                         style="display: block; margin: 0 auto; width: 2rem; height: 2rem;">
+                    <b>Station: ${feature.properties['station']}</b><br>
+                    <b>Coffee Shops (5-min walk): ${feature.properties['id_count']}</b><br>
+                    <b>Rank (out of 20): ${feature.properties['rank']}</b><br>
+                `;
+
+                marker.bindPopup(popupContent, { offset: [0, 0] });
+
+                return marker;
             }
-        }).addTo(map);  // Add the layer to the map
+        }).addTo(map);
     })
-    .catch(error => console.error('Error loading GeoJSON:', error))
+    .catch(error => console.error('Error loading GeoJSON:', error));
+
 
 fetch('data/skytrain_lines.geojson')
     .then(response => response.json())
