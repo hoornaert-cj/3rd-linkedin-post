@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Toronto's Top 5 Most Park Accessible Subway Stations</title>
+    <title>Vancouver's Top 5 Coffee Shop SkyTrain Stops</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -15,9 +15,6 @@
 
 </head>
 <body>
-    <!-- <div id="loading-overlay">
-        <div id="loading-message">Loading...</div>
-    </div> -->
 
     <div class="main-content">
         <h1>Top 5 Vancouver Coffee Shop SkyTrain Stops</h1>
@@ -26,7 +23,12 @@
         </section>
         <div class="dropdown-container">
             <label for="station-dropdown">Select a Station:</label>
-            <select id="station-dropdown"><option value="" disabled selected>Select a station</option></select>
+            <select id="station-dropdown">
+                <option value="" disabled selected>Select a station</option>
+            </select>
+            <label class="heatmap-toggle">
+                <input type="checkbox" id="toggle-heatmap"> Show Heatmap
+            </label>
         </div>
         <div id="map" class="map-container"></div>
     </div>

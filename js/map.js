@@ -2,6 +2,15 @@
 var map = L.map('map').setView([49.251546,-123.127252], 12);
 const stationMarkers = {};
 
+// Add the heatmap layer
+var heatmapLayer = L.tileLayer('heatmap_tiles/{z}/{x}/{y}.png', {
+    opacity: 0.7,
+    attribution: 'Heatmap &copy; Chris Hoornaert'
+});
+
+// Add the heatmap layer first, so it appears beneath other layers
+heatmapLayer.addTo(map);
+
 // Add tile layer
 L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png?api_key=22685591-9232-45c7-a495-cfdf0e81ab86', {
     minZoom: 11,
