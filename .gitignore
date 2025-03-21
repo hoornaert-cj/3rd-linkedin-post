@@ -80,6 +80,7 @@ node_modules/
 #####################
 
 .tmp/
+data/heatmap_tiles/
 
 
 # Ignore compiled CSS from repository
@@ -95,6 +96,8 @@ styles/
 *.orig
 *.log
 *.rej
+*.tif
+*.png
 *.swo
 *.swp
 *.vi
