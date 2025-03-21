@@ -12,14 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Add the heatmap layer
-    var heatmapLayer = L.tileLayer('data/heatmap_tiles/{z}/{x}/{y}/{x}-{y}.png', {
-        opacity: 0.7,
-        attribution: 'Heatmap &copy; Chris Hoornaert'
-    });
-
-    // Add the heatmap layer first, so it appears beneath other layers
-    heatmapLayer.addTo(map);
 
     // Add tile layer
     L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png?api_key=22685591-9232-45c7-a495-cfdf0e81ab86', {

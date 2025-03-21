@@ -246,11 +246,8 @@ a:hover {
         font-size: 0.9rem;
     }
 
-    .wiki-icon {
-        width: 1.875rem;
-        height: 1.875rem;
-        vertical-align: middle;
-        margin-left: 3px;
+    .leaflet-tile {
+        filter: sepia(80%) hue-rotate(20deg) saturate(150%);
     }
 }
 
