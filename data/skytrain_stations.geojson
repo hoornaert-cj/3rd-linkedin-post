@@ -21,7 +21,7 @@
 { "type": "Feature", "properties": { "station": "Vancouver City Center", "geo_local_area": "Downtown", "longitude": -123.119, "latitude": 49.282, "id_count": 38, "rank": 3 }, "geometry": { "type": "Point", "coordinates": [ -123.119284089214446, 49.281734707452856 ] } },
 { "type": "Feature", "properties": { "station": "Yaletown - Roundhouse", "geo_local_area": "Downtown", "longitude": -123.122, "latitude": 49.274, "id_count": 8, "rank": 8 }, "geometry": { "type": "Point", "coordinates": [ -123.121890377796404, 49.274362254837513 ] } },
 { "type": "Feature", "properties": { "station": "Oakridge - 41st Avenue", "geo_local_area": "Oakridge", "longitude": -123.116, "latitude": 49.233, "id_count": 1, "rank": 14 }, "geometry": { "type": "Point", "coordinates": [ -123.116040675328207, 49.233466810769322 ] } },
-{ "type": "Feature", "properties": { "station": "Langara - 49th Avenue", "geo_local_area": "Oakridge", "longitude": -123.116, "latitude": 49.226, "id_count": 0, "rank": 19 }, "geometry": { "type": "Point", "coordinates": [ -123.116324860846433, 49.22638691960163 ] } },
-{ "type": "Feature", "properties": { "station": "Nanaimo", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.056, "latitude": 49.248, "id_count": 0, "rank": 20 }, "geometry": { "type": "Point", "coordinates": [ -123.055871516332786, 49.24827221061684 ] } }
+{ "type": "Feature", "properties": { "station": "Langara - 49th Avenue", "geo_local_area": "Oakridge", "longitude": -123.116, "latitude": 49.226, "id_count": 0, "rank": 18 }, "geometry": { "type": "Point", "coordinates": [ -123.116324860846433, 49.22638691960163 ] } },
+{ "type": "Feature", "properties": { "station": "Nanaimo", "geo_local_area": "Renfrew-Collingwood", "longitude": -123.056, "latitude": 49.248, "id_count": 0, "rank": 18 }, "geometry": { "type": "Point", "coordinates": [ -123.055871516332786, 49.24827221061684 ] } }
 ]
 }
