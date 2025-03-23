@@ -233,13 +233,6 @@ a:hover {
         align-items: center;
         gap: 0.625rem;
 
-
-        .heatmap-toggle {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            cursor: pointer;
-        }
     }
 
     .leaflet-popup-content-wrapper {
