@@ -177,7 +177,6 @@ a:hover {
     box-shadow: none !important;
     padding: 0 !important;
 
-    /* Smooth fade-in/out transition */
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -200,10 +199,6 @@ a:hover {
     z-index: 9999;
   }
 
-  #loading-message {
-    font-size: 1.2rem;
-    color: #8a2be2;
-  }
 
 @media (max-width: 37.5em) {
     body {
@@ -237,10 +232,6 @@ a:hover {
 
     .leaflet-popup-content-wrapper {
         font-size: 0.9rem;
-    }
-
-    .leaflet-tile {
-        filter: sepia(80%) hue-rotate(20deg) saturate(150%);
     }
 }
 

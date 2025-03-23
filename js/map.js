@@ -2,15 +2,15 @@
 var map = L.map('map').setView([49.251546, -123.127252], 12);
 const stationMarkers = {};
 
-document.addEventListener('DOMContentLoaded', function () {
-    // All your DOM interaction code goes here
-    document.getElementById('heatmap-toggle').addEventListener('change', function(e) {
-        if (e.target.checked) {
-            map.addLayer(heatmapLayer);
-        } else {
-            map.removeLayer(heatmapLayer);
-        }
-    });
+// document.addEventListener('DOMContentLoaded', function () {
+//     // All your DOM interaction code goes here
+//     document.getElementById('heatmap-toggle').addEventListener('change', function(e) {
+//         if (e.target.checked) {
+//             map.addLayer(heatmapLayer);
+//         } else {
+//             map.removeLayer(heatmapLayer);
+//         }
+//     });
 
 
     // Add tile layer
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <b>Station: ${feature.properties['station']}</b><br>
                         <b>Neighbourhood: ${feature.properties['geo_local_area']}</b><br>
                         <b>Coffee Shops: ${feature.properties['id_count']}</b><br>
-                        <b>Rank (out of 20): ${feature.properties['rank']}</b><br>
+                        <b>Rank (from 1 to 18): ${feature.properties['rank']}</b><br>
                     `;
 
                     marker.bindPopup(popupContent, { offset: [0, 0] });
@@ -166,5 +166,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }).addTo(map);
         });
-});
 
